@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="http://gulpjs.com"
-
-    >gulp (v3.9.1)</a>
+    <a href="http://gulpjs.com">gulp (v3.9.1)</a>
 </h1>
 <h4>The streaming build system</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp">module gulp</a><ol>
 
@@ -159,18 +152,18 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">completion = function (name) {
-  if (typeof name !== &#x27;string&#x27;) {
-    throw new Error(&#x27;Missing completion type&#x27;);
+  if (typeof name !== 'string') {
+    throw new Error('Missing completion type');
   }
-  var file = path.join(__dirname, &#x27;../completion&#x27;, name);
+  var file = path.join(__dirname, '../completion', name);
   try {
-    console.log(fs.readFileSync(file, &#x27;utf8&#x27;));
+    console.log(fs.readFileSync(file, 'utf8'));
     process.exit(0);
   } catch (err) {
     console.log(
-      &#x27;echo &#x22;gulp autocompletion rules for&#x27;,
-      &#x27;\&#x27;&#x27; + name + &#x27;\&#x27;&#x27;,
-      &#x27;not found&#x22;&#x27;
+      'echo "gulp autocompletion rules for',
+      '\'' + name + '\'',
+      'not found"'
     );
     process.exit(5);
   }
@@ -227,18 +220,18 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">completion = function (name) {
-  if (typeof name !== &#x27;string&#x27;) {
-    throw new Error(&#x27;Missing completion type&#x27;);
+  if (typeof name !== 'string') {
+    throw new Error('Missing completion type');
   }
-  var file = path.join(__dirname, &#x27;../completion&#x27;, name);
+  var file = path.join(__dirname, '../completion', name);
   try {
-    console.log(fs.readFileSync(file, &#x27;utf8&#x27;));
+    console.log(fs.readFileSync(file, 'utf8'));
     process.exit(0);
   } catch (err) {
     console.log(
-      &#x27;echo &#x22;gulp autocompletion rules for&#x27;,
-      &#x27;\&#x27;&#x27; + name + &#x27;\&#x27;&#x27;,
-      &#x27;not found&#x22;&#x27;
+      'echo "gulp autocompletion rules for',
+      '\'' + name + '\'',
+      'not found"'
     );
     process.exit(5);
   }
@@ -284,3 +277,4 @@
     ]
 </div>
 </div>
+</body></html>

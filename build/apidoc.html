@@ -69,6 +69,24 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.completion">
+            function <span class="apidocSignatureSpan">gulp.</span>completion
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.taskTree">
+            function <span class="apidocSignatureSpan">gulp.</span>taskTree
+            <span class="apidocSignatureSpan">(tasks)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">gulp.</span>_eventsCount</span>
 
         </li>
@@ -99,6 +117,32 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp.completion">module gulp.completion</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.completion.completion">
+            function <span class="apidocSignatureSpan">gulp.</span>completion
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp.taskTree">module gulp.taskTree</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp.taskTree.taskTree">
+            function <span class="apidocSignatureSpan">gulp.</span>taskTree
+            <span class="apidocSignatureSpan">(tasks)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
@@ -107,6 +151,56 @@
 
 
 
+    <h2>
+        <a href="#apidoc.element.gulp.completion" id="apidoc.element.gulp.completion">
+        function <span class="apidocSignatureSpan">gulp.</span>completion
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">completion = function (name) {
+  if (typeof name !== &#x27;string&#x27;) {
+    throw new Error(&#x27;Missing completion type&#x27;);
+  }
+  var file = path.join(__dirname, &#x27;../completion&#x27;, name);
+  try {
+    console.log(fs.readFileSync(file, &#x27;utf8&#x27;));
+    process.exit(0);
+  } catch (err) {
+    console.log(
+      &#x27;echo &#x22;gulp autocompletion rules for&#x27;,
+      &#x27;\&#x27;&#x27; + name + &#x27;\&#x27;&#x27;,
+      &#x27;not found&#x22;&#x27;
+    );
+    process.exit(5);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.taskTree" id="apidoc.element.gulp.taskTree">
+        function <span class="apidocSignatureSpan">gulp.</span>taskTree
+        <span class="apidocSignatureSpan">(tasks)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">taskTree = function (tasks) {
+  return Object.keys(tasks)
+    .reduce(function(prev, task) {
+      prev.nodes.push({
+        label: task,
+        nodes: tasks[task].dep,
+      });
+      return prev;
+    }, {
+      nodes: [],
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
 
 
 
@@ -114,6 +208,72 @@
 
 
 
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp.completion" id="apidoc.module.gulp.completion">module gulp.completion</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.completion.completion" id="apidoc.element.gulp.completion.completion">
+        function <span class="apidocSignatureSpan">gulp.</span>completion
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">completion = function (name) {
+  if (typeof name !== &#x27;string&#x27;) {
+    throw new Error(&#x27;Missing completion type&#x27;);
+  }
+  var file = path.join(__dirname, &#x27;../completion&#x27;, name);
+  try {
+    console.log(fs.readFileSync(file, &#x27;utf8&#x27;));
+    process.exit(0);
+  } catch (err) {
+    console.log(
+      &#x27;echo &#x22;gulp autocompletion rules for&#x27;,
+      &#x27;\&#x27;&#x27; + name + &#x27;\&#x27;&#x27;,
+      &#x27;not found&#x22;&#x27;
+    );
+    process.exit(5);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp.taskTree" id="apidoc.module.gulp.taskTree">module gulp.taskTree</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp.taskTree.taskTree" id="apidoc.element.gulp.taskTree.taskTree">
+        function <span class="apidocSignatureSpan">gulp.</span>taskTree
+        <span class="apidocSignatureSpan">(tasks)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">taskTree = function (tasks) {
+  return Object.keys(tasks)
+    .reduce(function(prev, task) {
+      prev.nodes.push({
+        label: task,
+        nodes: tasks[task].dep,
+      });
+      return prev;
+    }, {
+      nodes: [],
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
 
 
 </div>
