@@ -1,6 +1,6 @@
 # npmdoc-gulp
 
-#### api documentation for  [gulp (v3.9.1)](http://gulpjs.com)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp)
+#### basic api documentation for  [gulp (v3.9.1)](http://gulpjs.com)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp)
 
 #### The streaming build system
 
